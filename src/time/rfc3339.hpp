@@ -94,7 +94,7 @@ public:
      */
     static std::string to_string(
         time_point tp, 
-        int subsecond_precision = 3,
+        unsigned subsecond_precision = 3,
         const std::string& time_offset = utc_indicator())
     {
         // First calculate the offset minutes according to the
@@ -110,7 +110,7 @@ public:
              offset_minutes * nanos_in_minute());
  
         subsecond_precision = 
-            std::min(std::max(subsecond_precision, 0), nano_second_precision());
+            std::min(std::max(subsecond_precision, 0U), nano_second_precision());
         std::time_t seconds = tp.nanos_since_epoch() / nanos_in_second();
 
         std::ostringstream stream;
@@ -121,7 +121,7 @@ public:
             std::string subsecond_string;
             uint32_t in_nanos = nanos_in_second() / 10;
             uint64_t subsecond = tp.nanos_since_epoch() - seconds * nanos_in_second();
-            for(int i = 0; i < subsecond_precision; ++i)
+            for(unsigned i = 0; i < subsecond_precision; ++i)
             {
                 uint32_t val = subsecond / in_nanos;
                 subsecond_string.push_back('0' + val);
