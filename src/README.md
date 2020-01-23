@@ -80,7 +80,6 @@ pip install compiletools
 apt-get install libcereal-dev libstdc++-6-dev libboost-test1.62-dev
 
 
-
 ### Fedora
 
 pip install compiletools
@@ -90,5 +89,6 @@ dnf install libcereal-dev libstdc++-6-dev libboost-test1.62-dev
 
 ### Notes
 
-Note libstdc++-6-dev is for std::experimental::optional
-Note libboost-test1.62-dev is the version of the boost unit testing framework used authors. Other versions may works also.
+Note libstdc++-6-dev is for std::experimental::optional - becomes std::optional with modern C++.
+
+Note libboost-test1.62-dev is the version of the boost unit testing framework used. Other versions may work.
