@@ -3,7 +3,7 @@
 The src directory provides an example of working code that can be compiled and
 prodded.
 
-# Protocol??? Sub Directory Summary - In Order Of Appearance
+# The protocol directories summary - by order of appearance
 
 A brief description of the contents of each protocol subdirectory.
 
@@ -58,9 +58,9 @@ Contains code mostly pertaining to parsing rfc3339 formatted time strings -
 the underlying time point class is intended to be the basis of all time based
 logic of any derived client/server code.
 
-## example???
+## The example directories
 
-This directory contains some simple examples showing basic serialization and how it
+These directories contain some simple examples showing basic serialization and how it
 works for each protocol version.
 
 # Compiling
