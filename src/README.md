@@ -3,17 +3,17 @@
 The src directory provides an example of working code that can be compiled and
 prodded.
 
-# Sub Directory Summary
+# Protocol??? Sub Directory Summary - In Order Of Appearance
 
-A brief description of the contents of each subdirectory.
+A brief description of the contents of each protocol subdirectory.
 
-## protocol
+## protocol20
 
 This directory contains the automatically generated cereal based expression of
 the OCPP 2.0 specification. It is generated in an automated fashion by running 
 the generator script - see generator/20/schema-to-cpp-header2.py. The command
 that was run to generate the source code is always captured in a comment inside
-the generated code - look at for example protocol/common.hpp to get the idea.
+the generated code - look at for example protocol20/common.hpp to get the idea.
 
 Note that the generator script takes care to ensure compilation is alway successful,
 and that the code is generated in a minimalistic fashion. For example code is only
@@ -23,13 +23,18 @@ corresponding protocol header that makes use of them.
 
 ## protocol16
 
-As in the protocol directory (see notes above), but the code here is generated
+As in the protocol20 directory (see notes above), but the code here is generated
 based on the OCPP 1.6J specification.
 
 ## protocol16ext
 
-As in the protocol directory (see notes above), but the code here is generated
+As in the protocol20 directory (see notes above), but the code here is generated
 based on the OCPP 1.6J security related extensions.
+
+## protocol201
+
+As in the protocol20 directory (see notes above), but the code here is generated
+based on the OCPP 2.0.1 specification.
 
 ## cereal
 
@@ -53,10 +58,10 @@ Contains code mostly pertaining to parsing rfc3339 formatted time strings -
 the underlying time point class is intended to be the basis of all time based
 logic of any derived client/server code.
 
-## example
+## example???
 
 This directory contains some simple examples showing basic serialization and how it
-works. 
+works for each protocol version.
 
 # Compiling
 
@@ -76,3 +81,10 @@ apt-get install libcereal-dev libstdc++-6-dev libboost-test1.62-dev
 
 Note libstdc++-6-dev is for std::experimental::optional
 Note libboost-test1.62-dev is the version of the boost unit testing framework used authors. Other versions may works also.
+
+
+### Fedora
+
+pip install compiletools
+
+dnf install libcereal-dev libstdc++-6-dev libboost-test1.62-dev
