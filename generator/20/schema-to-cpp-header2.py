@@ -40,7 +40,7 @@ schemes={}
 for input_file in args.input:
     
     # note the 1:... weird utf foo at start of string
-    input_str = " ".join([line.strip() for line in open(input_file).readlines()])[1:]
+    input_str = " ".join([line.strip() for line in open(input_file).readlines()])
     schema = json.loads(input_str)
     
     scheme = ocpp2_schema.Scheme()

@@ -29,6 +29,8 @@ args.include.append("<vector>")
 
 # note the 1:... weird utf foo at start of string
 input_str = " ".join([line.strip() for line in open(args.input).readlines()])[1:]
+# note, for 201, there's no need:
+#input_str = " ".join([line.strip() for line in open(args.input).readlines()])
 schema = json.loads(input_str)
 
 

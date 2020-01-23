@@ -58,6 +58,8 @@ class Object:
                 if member_struct.find("EnumType") == -1: 
                     self.struct_depends.append(member_struct)
                 output_struct_bot += "    %s %s;\n" %(optional(digit_prefix(member_struct),required), name)
+            elif "type" not in desc.keys(): # hack to deal with 201 schemas.. TODO clean this all up
+                continue
             elif desc["type"] == "string":
                 if "maxLength" in desc.keys():
                     output_struct_bot += "    %s %s;\n" %(optional("schema_string<%i>" %desc["maxLength"], required), name)
